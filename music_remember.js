@@ -2,7 +2,7 @@ let old_loudest = 0;
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other) {
-  background(20);
+  //background(20);
   rectMode(CENTER);
   textAlign(CENTER);
   textSize(40);
@@ -24,6 +24,7 @@ function draw_one_frame(words, vocal, drum, bass, other) {
   else {
     loudest = 4;
   }
+ 
 
   if(loudest == old_loudest) {
     background(20);
