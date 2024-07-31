@@ -83,11 +83,11 @@ function setup() {
   volumes = [vol1, vol2, vol3, vol4];
   volume_table_length = table.getRowCount();
   for(let i=0; i< volume_table_length;i++) {
-    let row = table["rows"][i].arr;
-    vol1.push(float(row[1]));
-    vol2.push(float(row[2]));
-    vol3.push(float(row[3]));
-    vol4.push(float(row[4]));
+    let roww = table["rows"][i].arr;
+    vol1.push(float(roww[1]));
+    vol2.push(float(roww[2]));
+    vol3.push(float(roww[3]));
+    vol4.push(float(roww[4]));
   }
   /*
   for(let i=0; i<4; i++) {
@@ -192,18 +192,18 @@ function draw() {
         // let row = table["rows"][curSlice].arr
         // draw_one_frame(row);
         // print(row);
-        let row = [volumes[0][curSlice], volumes[1][curSlice], volumes[2][curSlice], volumes[3][curSlice]]
+        let roww = [volumes[0][curSlice], volumes[1][curSlice], volumes[2][curSlice], volumes[3][curSlice]]
         cur_words = "";
         if (curSlice < words.length) {
           cur_words = words[curSlice];
         }
         textInput.value(cur_words);
-        slider1.value(row[0]);
-        slider2.value(row[1]);
-        slider3.value(row[2]);
-        slider4.value(row[3]);
+        slider1.value(roww[0]);
+        slider2.value(roww[1]);
+        slider3.value(roww[2]);
+        slider4.value(roww[3]);
        // draw_one_frame(cur_words, row[0], row[1], row[2], row[3], curSlice);currentTime()
-       draw_one_frame(cur_words, row[0], row[1], row[2], row[3], song.currentTime());
+       draw_one_frame(cur_words, roww[0], roww[1], roww[2], roww[3], song.currentTime());
       }
     }
   }
