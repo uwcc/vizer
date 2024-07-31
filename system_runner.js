@@ -202,8 +202,8 @@ function draw() {
         slider2.value(roww[1]);
         slider3.value(roww[2]);
         slider4.value(roww[3]);
-       // draw_one_frame(cur_words, row[0], row[1], row[2], row[3], curSlice);currentTime()
-       draw_one_frame(cur_words, roww[0], roww[1], roww[2], roww[3], song.currentTime());
+       draw_one_frame(cur_words, roww[0], roww[1], roww[2], roww[3], curSlice);//currentTime()
+       //draw_one_frame(cur_words, roww[0], roww[1], roww[2], roww[3], song.currentTime());
       }
     }
   }
