@@ -2,7 +2,7 @@
 let lastWords = "...";
 let wordBrightness = 255;
 let yOffset = 0;
-
+let seconds;
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
 background(0);
 rectMode(CENTER);
@@ -45,7 +45,8 @@ rect(8*width/10, rectY, width/6, volume_other);
 fill(200)
 textAlign(LEFT);
 // demonstrate use of non-documented "counter" variable
-let seconds = counter
+seconds = counter;
+
 if(seconds > 0) {
   textSize(60);
   text(nf(seconds, 3, 2), 20, height-20);
